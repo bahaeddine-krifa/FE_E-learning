@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<br>
+<h1 class="text-center">{{chapitre.nomChap}}</h1><br>
+<div *ngFor="let objectif of objectifs">
+  <div class="list">
+    <div class="card">
+      <h3>{{objectif.titre}}</h3>
+      <p class="text single-line">
+        {{objectif.description}}  
+      </p><br>
+     
+      <h4>Instructions</h4>
+      <p>Le mot cle d'une classe en java:</p>
+      <textarea [(ngModel)]="objectif.reponse" name="" id="" cols="30" rows="10" placeholder="reponse..."></textarea>  
+      <br>
+      <a class="btn btn-success" (click)="onAjouterClick(objectif.reponse)"><i class="bi bi-check"></i> Ajouter</a>
+      
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 bg-light text-right">
+      <button type="button" class="btn btn-dark">precedant</button>
+      <button type="button" class="btn btn-outline-primary" [disabled]="!isSuivantEnabled" (click)="next()">suivant</button>
+    </div>
+  </div>
+</div>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="progressPercentage">
+    {{progressPercentage}}%
+  </div>
+</div>

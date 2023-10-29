@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="https://mdbgo.com/">
+        <i class="fa fa-graduation-cap"></i>
+    </a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarButtonsExample"
+        aria-controls="navbarButtonsExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+        </ul>
+        <!-- Left links -->
+  
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn btn-link px-3 me-2" routerLink="/elearning/chapitre" (click)="hidden()">
+            Cours
+          </button>
+          <button type="button" class="btn btn-primary me-3 " (click)="logout()">
+            LogOut
+        </button>
+    </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  
+  <div class="bodyy" *ngIf="baha">
+  <div class="containerd">
+    <div class="box">
+
+        <div class="title">
+            <span class="block"></span>
+            <h1>welcome<span></span></h1>
+        </div>
+
+        <div class="role">
+            <div class="block"></div>
+            <p>e-learning</p>
+        </div>
+
+    </div>
+</div>
+
+<a  target="_blank">
+    <footer>
+    <div class="texto">
+        <span>
+            <i class="fa fa-check"></i>
+            by Baha eddine krifa </span>
+    </div>
+</footer>
+   </a>
+</div>
+<router-outlet></router-outlet>
