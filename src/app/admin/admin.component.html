@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="sidebar-navigation">
+  <ul>
+    <li [class.active]="isActive('/admin/acceuil')" (click)="navigate('/admin/acceuil')">
+      <i class="fa fa-home"></i>
+      <span class="tooltip">Acceuil</span>
+    </li>
+    <li [class.active]="isActive('/admin/listcondidat')" (click)="navigate('/admin/listcondidat')">
+      <i class="fa fa-graduation-cap"></i>
+      <span class="tooltip">Liste condidat</span>
+    </li>
+    <li [class.active]="isActive('/admin/listchapitre')" (click)="navigate('/admin/listchapitre')">
+      <i class="fa fa-book"></i>
+      <span class="tooltip">liste chapitre</span>
+    </li>
+    <li (click)="logout()" class="logout">
+      <i class="fa fa-sign-out out"></i>
+      <span class="tooltip">LogOut</span>
+    </li>
+  </ul>
+</nav>
+
+
+<router-outlet></router-outlet>
